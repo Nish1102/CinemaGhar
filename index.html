@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie App</title>
+  </head>
+  <h1 id="title" >Welcome to the CinemaGhar</h1>
+  <body>
+
+    <header>
+        
+      <form id="form">       
+        <input type="text" id="search" class="search" placeholder="Search">
+    </form>
+    
+    </header>
+
+    <main id="main"></main>
+
+    <script src="script.js"></script>
+    <footer>
+  <marquee behavior="scroll" direction="left" style="color: orange;">Copyright © 2023 | Nishant Amar</marquee>
+</footer>
+<button onclick="topFunction()" id="back-to-top-btn" title="Go to top"><i class="bi bi-arrow-up"></i> Go to Top</button>
+
+
+<script>
+    // Get the button:
+    const backToTopButton = document.getElementById("back-to-top-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+  </body>
+</html>
